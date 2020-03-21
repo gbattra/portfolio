@@ -134,25 +134,25 @@ function App() {
         verticalAlign='middle'>
         {PROJECTS.map((project, i) => {
           return (
-                <Card raised link href={project.href} style={{"margin":"20px"}}>
-                  <Image src={project.imagePath} wrapped ui={false} />
-                  <Card.Content textAlign={'left'}>
-                    <Card.Header>{project.header}</Card.Header>
-                    <Card.Meta>
-                      <span className='date'>{project.subheader}</span>
-                    </Card.Meta>
-                    <Card.Description>
-                      {project.description}
-                    </Card.Description>
-                  </Card.Content>
-                  <Card.Content extra textAlign={'left'}>
-                    <a>
-                      {project.skills}
-                    </a>
-                  </Card.Content>
-                </Card>
-            )
-          })}
+            <Card raised link href={project.href} style={{"margin":"20px"}}>
+              <Image src={project.imagePath} wrapped ui={false} />
+              <Card.Content textAlign={'left'}>
+                <Card.Header>{project.header}</Card.Header>
+                <Card.Meta>
+                  <span className='date'>{project.subheader}</span>
+                </Card.Meta>
+                <Card.Description>
+                  {project.description}
+                </Card.Description>
+              </Card.Content>
+              <Card.Content extra textAlign={'left'}>
+                <a>
+                  {project.skills}
+                </a>
+              </Card.Content>
+            </Card>
+          )
+        })}
       </Grid>
     </div>
   );
