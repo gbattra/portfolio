@@ -17,6 +17,14 @@ const ME_BLOCK = {
 const PROJECTS = [
   ME_BLOCK,
   {
+    imagePath: 'assets/images/PaintMe.jpg',
+    href: 'https://github.com/gbattra/paint-me-v2',
+    header: 'Paint Me',
+    subheader: 'NST-based webapp for generating AI art',
+    description: '',
+    skills: 'Python, Tensorflow, NST, Django, Flask, Pub/Sub, GCP'
+  },
+  {
     imagePath: 'assets/images/VAE.png',
     href: 'https://github.com/gbattra/MNIST_VAE',
     header: 'MNIST VAE',
@@ -104,14 +112,6 @@ const PROJECTS = [
     subheader: 'Ruby on Rails backend for a music sharing application',
     description: '',
     skills: 'Ruby, Rails, rSpec, MVC, OOP'
-  },
-  {
-    imagePath: 'assets/images/PaintMe.jpg',
-    href: 'https://github.com/gbattra/paint-me-v2',
-    header: 'Paint Me',
-    subheader: 'NST-based webapp for generating AI art',
-    description: '',
-    skills: 'Python, Tensorflow, NST, Django, Flask, Pub/Sub, GCP'
   },
   {
     imagePath: 'assets/images/Unity.png',
