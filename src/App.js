@@ -98,6 +98,14 @@ const PROJECTS = [
     skills: 'Python, Numpy, Pandas, Matplotlib'
   },
   {
+    imagePath: 'assets/images/phaser.png',
+    href: 'https://github.com/gnwgames/CircleDodge',
+    header: 'CircleDodge',
+    subheader: 'A PhaserJS game where you dodge circles',
+    description: '',
+    skills: 'Javascript, PhaserJS, Game AI'
+  },
+  {
     imagePath: 'assets/images/react.png',
     href: 'https://github.com/gbattra/baxer_client',
     header: 'Baxer',
@@ -114,7 +122,7 @@ const PROJECTS = [
     skills: 'Ruby, Rails, rSpec, MVC, OOP'
   },
   {
-    imagePath: 'assets/images/Unity.png',
+    imagePath: 'assets/images/hexdoge.jpg',
     href: 'https://github.com/gbattra/HexDodge',
     header: 'HexDodge',
     subheader: 'iOS game built in Unity',
