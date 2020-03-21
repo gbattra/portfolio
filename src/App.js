@@ -6,7 +6,7 @@ import { Card, Icon, Image, Grid } from 'semantic-ui-react'
 const NUM_COL = 4;
 
 const ME_BLOCK = {
-  imagePath: 'assets/images/me2.jpg',
+  imagePath: 'assets/images/me.jpg',
   href: 'https://github.com/gbattra',
   header: 'Greg Attra',
   subheader: 'Me!',
@@ -15,6 +15,7 @@ const ME_BLOCK = {
 }
 
 const PROJECTS = [
+  ME_BLOCK,
   {
     imagePath: 'assets/images/VAE.png',
     href: 'https://github.com/gbattra/MNIST_VAE',
@@ -55,30 +56,7 @@ const PROJECTS = [
     description: '',
     skills: 'Python, Numpy, OOP, Linear Algebra'
   },
-  {
-    imagePath: 'assets/images/Portfolio.png',
-    href: 'https://github.com/gbattra/portfolio',
-    header: 'Portfolio Website',
-    subheader: 'Light React app for this very Portfolio webpage',
-    description: '',
-    skills: 'Javascript, React, HTML/CSS, Semantic UI'
-  },
-  {
-    imagePath: 'assets/images/PaintMe.jpg',
-    href: 'https://github.com/gbattra/paint-me-v2',
-    header: 'Paint Me',
-    subheader: 'NST-based webapp for generating AI art',
-    description: '',
-    skills: 'Python, Tensorflow, NST, Django, Flask, Pub/Sub, GCP'
-  },
-  {
-    imagePath: 'assets/images/Unity.png',
-    href: 'https://github.com/gbattra/HexDodge',
-    header: 'HexDodge',
-    subheader: 'iOS game built in Unity',
-    description: '',
-    skills: 'Unity, C#, Linear Algebra, 3D Graphics'
-  },
+
   {
     imagePath: 'assets/images/Streetview.png',
     href: 'https://github.com/gbattra/StreetviewHouseNumberDetector',
@@ -110,65 +88,71 @@ const PROJECTS = [
     subheader: 'A linear regression model for bike rentalss',
     description: '',
     skills: 'Python, Numpy, Pandas, Matplotlib'
+  },
+  {
+    imagePath: 'assets/images/react.png',
+    href: 'https://github.com/gbattra/baxer_client',
+    header: 'Baxer',
+    subheader: 'React frontend for a music sharing application',
+    description: '',
+    skills: 'Javascript, React, HTML/CSS, Semantic UI'
+  },
+  {
+    imagePath: 'assets/images/rails.png',
+    href: 'https://github.com/gbattra/rocketyr-api',
+    header: 'Roketyr',
+    subheader: 'Ruby on Rails backend for a music sharing application',
+    description: '',
+    skills: 'Ruby, Rails, rSpec, MVC, OOP'
+  },
+  {
+    imagePath: 'assets/images/PaintMe.jpg',
+    href: 'https://github.com/gbattra/paint-me-v2',
+    header: 'Paint Me',
+    subheader: 'NST-based webapp for generating AI art',
+    description: '',
+    skills: 'Python, Tensorflow, NST, Django, Flask, Pub/Sub, GCP'
+  },
+  {
+    imagePath: 'assets/images/Unity.png',
+    href: 'https://github.com/gbattra/HexDodge',
+    header: 'HexDodge',
+    subheader: 'iOS game built in Unity',
+    description: '',
+    skills: 'Unity, C#, Linear Algebra, 3D Graphics'
   }
 ]
-
-function PROJECTS_ROWS() {
-  var rows = [];
-  var row = [];
-
-  PROJECTS.sort(() =>{
-    return .5 - Math.random();
-  }).unshift(ME_BLOCK);
-
-  PROJECTS.map((project, i) => {
-    row.push(project);
-    if (row.length === NUM_COL || i == PROJECTS.length - 1) {
-      rows.push(row);
-      row = []
-    }
-  })
-
-  return rows;
-}
 
 function App() {
   return (
     <div className="App">
       <Grid
+        centered
         relaxed
         padded
         columns='equal'
         verticalAlign='middle'>
-        {PROJECTS_ROWS().map((row, i) => {
+        {PROJECTS.map((project, i) => {
           return (
-            <Grid.Row columns={NUM_COL} key={i}>
-              {row.map((project, j) => {
-                return (
-                  <Grid.Column key={j}>
-                    <Card link href={project.href}>
-                      <Image src={project.imagePath} wrapped ui={false} />
-                      <Card.Content textAlign={'left'}>
-                        <Card.Header>{project.header}</Card.Header>
-                        <Card.Meta>
-                          <span className='date'>{project.subheader}</span>
-                        </Card.Meta>
-                        <Card.Description>
-                          {project.description}
-                        </Card.Description>
-                      </Card.Content>
-                      <Card.Content extra textAlign={'left'}>
-                        <a>
-                          {project.skills}
-                        </a>
-                      </Card.Content>
-                    </Card>
-                  </Grid.Column>
-                )
-              })}
-            </Grid.Row>
-          )
-        })}
+                <Card raised link href={project.href} style={{"margin":"20px"}}>
+                  <Image src={project.imagePath} wrapped ui={false} />
+                  <Card.Content textAlign={'left'}>
+                    <Card.Header>{project.header}</Card.Header>
+                    <Card.Meta>
+                      <span className='date'>{project.subheader}</span>
+                    </Card.Meta>
+                    <Card.Description>
+                      {project.description}
+                    </Card.Description>
+                  </Card.Content>
+                  <Card.Content extra textAlign={'left'}>
+                    <a>
+                      {project.skills}
+                    </a>
+                  </Card.Content>
+                </Card>
+            )
+          })}
       </Grid>
     </div>
   );
