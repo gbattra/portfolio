@@ -11,7 +11,7 @@ const ME_BLOCK = {
   header: 'Greg Attra',
   subheader: 'Me!',
   description: '',
-  skills: 'Deep Learning Engineer, System Architect, Software Engineer, Data Scientist'
+  skills: 'Deep Learning Engineer, Systems Architect, Software Engineer, Data Scientist'
 }
 
 const PROJECTS = [
