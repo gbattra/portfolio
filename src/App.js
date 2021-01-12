@@ -127,6 +127,14 @@ const PROJECTS = [
     href: 'https://github.com/gbattra/HexDodge',
     description: '',
     skills: 'Unity, C#, Linear Algebra, 3D Graphics'
+  },
+  {
+    header: 'Kill the Virus',
+    subheader: 'WebGL game built in Unity',
+    imagePath: 'assets/images/ktv.jpg',
+    href: 'https://mooninteractive.itch.io/kill-the-virus',
+    description: 'Dodge the asteroids, kill the virus.',
+    skills: 'Unity, C#, Linear Algebra, 3D Graphics'
   }
 ]
 
